@@ -1,0 +1,163 @@
+{
+    "ReRoutes": [
+        {
+            "DownstreamPathTemplate": "/api/user/authenticate",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5000
+                }
+            ],
+            "UpstreamPathTemplate": "/user/authenticate",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/customer",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 64269
+                }
+            ],
+            "UpstreamPathTemplate": "/customer",
+            "UpstreamHttpMethod": [ "Post" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/account",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 64269
+                }
+            ],
+            "UpstreamPathTemplate": "/account",
+            "UpstreamHttpMethod": [ "Post" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/customer",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 64269
+                }
+            ],
+            "UpstreamPathTemplate": "/customer",
+            "UpstreamHttpMethod": [ "Get" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/account/byaccount",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 64269
+                }
+            ],
+            "UpstreamPathTemplate": "/account/byaccount",
+            "UpstreamHttpMethod": [ "Get" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/account/bycustomer",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 64269
+                }
+            ],
+            "UpstreamPathTemplate": "/account/bycustomer",
+            "UpstreamHttpMethod": [ "Get" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/transaction/deposit",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 60243
+                }
+            ],
+            "UpstreamPathTemplate": "/transaction/deposit",
+            "UpstreamHttpMethod": [ "Post" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/transaction/withdraw",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 60243
+                }
+            ],
+            "UpstreamPathTemplate": "/transaction/withdraw",
+            "UpstreamHttpMethod": [ "Post" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/transaction/byaccount",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 60243
+                }
+            ],
+            "UpstreamPathTemplate": "/transaction/byaccount",
+            "UpstreamHttpMethod": [ "Get" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/transaction/bycustomer",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 60243
+                }
+            ],
+            "UpstreamPathTemplate": "/transaction/bycustomer",
+            "UpstreamHttpMethod": [ "Get" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
+        }
+    ],
+    "GlobalConfiguration": {
+        "UseServiceDiscovery": false
+    }
+}
